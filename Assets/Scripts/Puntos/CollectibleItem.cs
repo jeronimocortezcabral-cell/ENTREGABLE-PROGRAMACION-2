@@ -17,7 +17,6 @@ public class CollectibleItem : NetworkBehaviour
             {
                 inventory.AddItems(itemValue);
 
-                // Desaparece de la red para todos a la vez
                 GetComponent<NetworkObject>().Despawn();
                 Destroy(gameObject);
             }

@@ -17,7 +17,7 @@ public class DepositZone : NetworkBehaviour
         if (other.CompareTag("Player"))
         {
             PlayerInventory inventory = other.GetComponent<PlayerInventory>();
-            NetworkObject playerNetObj = other.GetComponent<NetworkObject>(); // Buscamos su identidad de red
+            NetworkObject playerNetObj = other.GetComponent<NetworkObject>();
 
             if (inventory != null && playerNetObj != null && inventory.carriedItems.Value > 0)
             {
@@ -26,7 +26,6 @@ public class DepositZone : NetworkBehaviour
 
                 if (gameManager != null)
                 {
-                    // LE PASAMOS LOS PUNTOS Y EL ID DEL DUEÑO
                     gameManager.DepositItems(itemsToDeposit, playerNetObj.OwnerClientId);
                 }
             }

@@ -20,7 +20,7 @@ public class PlayerMovement : NetworkBehaviour
 
         characterController = GetComponent<CharacterController>();
 
-        // 🛠️ TRUCO ANTICLIPPING: Desactivamos el controller, lo subimos en Y, y lo reactivamos
+        // TRUCO ANTICLIPPING
         if (characterController != null)
         {
             characterController.enabled = false;

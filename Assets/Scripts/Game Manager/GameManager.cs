@@ -18,7 +18,6 @@ public class GameManager : NetworkBehaviour
     public TextMeshProUGUI timerText;
     public TextMeshProUGUI pointsText;
 
-    // Variables estáticas para exportar los resultados a la pantalla de Game Over
     public static string WinnerText = "";
     public static float HostFinalScore = 0f;
     public static float ClientFinalScore = 0f;
@@ -63,7 +62,7 @@ public class GameManager : NetworkBehaviour
                     winnerMessage = "¡HUBO UN EMPATE!";
                 }
 
-                // Mandamos el veredicto y los puntajes finales a todos los clientes
+                // Mandar el veredicto y los puntajes finales para todos los clientes
                 ExecuteGameOverClientRpc(winnerMessage, hostScore.Value, clientScore.Value);
             }
         }
@@ -120,7 +119,6 @@ public class GameManager : NetworkBehaviour
         HostFinalScore = hostPts;
         ClientFinalScore = clientPts;
 
-        // 🍏 SOLUCIÓN: No apagamos la red. El Host usa Netcode para mudar a todos en sincronía.
         if (IsServer)
         {
             NetworkManager.Singleton.SceneManager.LoadScene("GameOver", LoadSceneMode.Single);

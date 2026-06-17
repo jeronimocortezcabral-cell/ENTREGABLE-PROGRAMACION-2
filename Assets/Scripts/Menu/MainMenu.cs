@@ -2,7 +2,7 @@
 using Unity.Netcode.Transports.UTP;
 using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement; // 🔥 NECESARIO PARA COMPLEMENTAR LAS ESCENAS
+using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
@@ -12,7 +12,7 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private GameObject pantallaClientePanel;
 
     [Header("Configuración de Escenas")]
-    [SerializeField] private string nombreEscenaJuego = "Juego"; // 🔥 Escribí acá el nombre exacto de tu escena de juego
+    [SerializeField] private string nombreEscenaJuego = "Juego";
 
     void Start()
     {
@@ -28,13 +28,11 @@ public class MainMenu : MonoBehaviour
     // Función para el botón de HOST
     public void IniciarHost()
     {
-        // 1. Iniciamos el Host
+        //Iniciar el Host
         if (NetworkManager.Singleton.StartHost())
         {
             Debug.Log("🌐 Host iniciado correctamente. Cambiando de escena...");
 
-            // 2. 🔥 REGLA DE ORO DE NETCODE: El servidor cambia de escena usando su propio SceneManager.
-            // Esto hace que la escena cambie para el Host Y para cualquier cliente que se conecte después.
             NetworkManager.Singleton.SceneManager.LoadScene(nombreEscenaJuego, LoadSceneMode.Single);
         }
         else

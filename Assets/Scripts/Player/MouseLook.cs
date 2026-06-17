@@ -22,7 +22,6 @@ public class MouseLook : NetworkBehaviour
             return;
         }
 
-        // Alerta en consola si te olvidaste de arrastrar el cuerpo del Player
         if (playerBody == null)
         {
             Debug.LogError("🚨 ¡FALTA ASIGNAR! Arrastrá el objeto padre 'Player' a la casilla PlayerBody de la cámara.", this);

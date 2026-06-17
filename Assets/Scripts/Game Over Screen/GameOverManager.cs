@@ -10,7 +10,6 @@ public class GameOverManager : MonoBehaviour
 
     private void Start()
     {
-        // 1. Mostramos los puntajes de la partida que acaba de terminar
         if (finalScoreText != null)
         {
             finalScoreText.text = $"{GameManager.WinnerText}\n\n" +
@@ -18,7 +17,6 @@ public class GameOverManager : MonoBehaviour
                                   $"Jugador 2 (Cliente): {GameManager.ClientFinalScore:F1} pts";
         }
 
-        // 2. Liberamos y mostramos el cursor para que puedan interactuar con la UI
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
     }
@@ -27,14 +25,11 @@ public class GameOverManager : MonoBehaviour
     {
         Debug.Log("🔌 [GAME OVER] Apagando Netcode y regresando al menú principal...");
 
-        // 3. Apagamos Netcode por completo. Esto desconecta al cliente,
-        // cierra el servidor/host y limpia todos los objetos de red de la memoria.
         if (NetworkManager.Singleton != null)
         {
             NetworkManager.Singleton.Shutdown();
         }
 
-        // 4. Cargamos la escena del menú de forma tradicional
         SceneManager.LoadScene("MainMenu");
     }
 }
