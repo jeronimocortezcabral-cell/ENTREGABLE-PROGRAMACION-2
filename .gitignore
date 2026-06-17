@@ -3,3 +3,5 @@ Logs/
 obj/
 .vs/
 *.vsidx
+/[Bb]uild/
+/[Bb]uilds/
