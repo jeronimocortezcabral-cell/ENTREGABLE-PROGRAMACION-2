@@ -25,7 +25,11 @@ public class MainMenu : MonoBehaviour
         if (pantallaClientePanel != null) pantallaClientePanel.SetActive(false);
     }
 
-    // Función para el botón de HOST
+    public void BotonSalir()
+    {
+        Application.Quit();
+    }
+
     public void IniciarHost()
     {
         //Iniciar el Host
@@ -71,7 +75,6 @@ public class MainMenu : MonoBehaviour
             transport.ConnectionData.Address = ipIngresada;
         }
 
-        // El cliente solo avisa que se conecta. El servidor se encarga de mandarlo a la escena correcta automáticamente
         NetworkManager.Singleton.StartClient();
         ApagarTodoElMenu();
     }
