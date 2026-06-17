@@ -5,3 +5,4 @@ obj/
 *.vsidx
 /[Bb]uild/
 /[Bb]uilds/
+/[Tt]emp/
