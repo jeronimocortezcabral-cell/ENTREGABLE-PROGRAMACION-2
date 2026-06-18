@@ -25,7 +25,12 @@ public class GameManager : NetworkBehaviour
     private void Start()
     {
         Time.timeScale = 1f;
+        // La inicialización de variables de red se movió a OnNetworkSpawn para evitar desincronizaciones
+    }
 
+    public override void OnNetworkSpawn()
+    {
+        // Esto se ejecuta únicamente cuando la red está 100% lista y conectada en cada pantalla
         if (IsServer)
         {
             timeRemaining.Value = maxTime;
@@ -98,17 +103,21 @@ public class GameManager : NetworkBehaviour
 
     public void DepositItems(int amount, ulong playerId)
     {
+        // CONTROL ABSOLUTO: Solo el servidor procesa el depósito para evitar errores
         if (!IsServer) return;
 
         float pointsGained = amount * 1.25f;
 
-        if (playerId == NetworkManager.ServerClientId)
+        // Comparamos directamente contra la ID 0, que Netcode siempre le asigna al Host de la partida
+        if (playerId == 0)
         {
             hostScore.Value += pointsGained;
+            Debug.Log($"[SERVER] Puntos asignados al HOST. Nuevo total: {hostScore.Value}");
         }
         else
         {
             clientScore.Value += pointsGained;
+            Debug.Log($"[SERVER] Puntos asignados al CLIENTE (ID: {playerId}). Nuevo total: {clientScore.Value}");
         }
     }
 

@@ -69,8 +69,8 @@ MonoBehaviour:
     y: 0
     width: 398
     height: 941
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 76}
+  m_MaxSize: {x: 4001, y: 4026}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -302,7 +302,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 43
+    y: 0
     width: 1920
     height: 36
   m_SerializedDataModeController:
@@ -620,7 +620,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 717
+    y: 662
     width: 1521
     height: 277
   m_SerializedDataModeController:
@@ -671,9 +671,7 @@ MonoBehaviour:
       m_Data: 57210
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 57100
-    - m_Data: 57190
-    - m_Data: 1000000000
+    - m_Data: 56996
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -706,7 +704,7 @@ MonoBehaviour:
       m_Data: 0
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 57100
+    - m_Data: 56996
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -788,8 +786,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Inspector\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 1522
-    y: 79
+    x: 1523
+    y: 24
     width: 397
     height: 915
   m_SerializedDataModeController:
@@ -840,7 +838,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 79
+    y: 24
     width: 283
     height: 612
   m_SerializedDataModeController:
@@ -859,8 +857,7 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs:
-      - m_Data: 56778
+      m_SelectedIDs: []
       m_LastClickedID:
         m_Data: 0
       m_ExpandedIDs:
@@ -912,8 +909,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Scene\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 284
-    y: 79
+    x: 285
+    y: 24
     width: 1236
     height: 612
   m_SerializedDataModeController:
@@ -1424,7 +1421,7 @@ MonoBehaviour:
   m_Position:
     m_Target: {x: 49.98, y: 1, z: 23.53}
     speed: 2
-    m_Value: {x: 49.98007, y: 1.0000211, z: 23.530178}
+    m_Value: {x: 49.98, y: 1, z: 23.53}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1472,11 +1469,11 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: -0.13380498, y: 0.107421316, z: -0.014542895, w: -0.9850858}
     speed: 2
-    m_Value: {x: -0.1338234, y: 0.10594099, z: -0.014341824, w: -0.98522186}
+    m_Value: {x: -0.13380498, y: 0.10742131, z: -0.014542895, w: -0.9850858}
   m_Size:
     m_Target: 10
     speed: 2
-    m_Value: 10.000174
+    m_Value: 10
   m_Ortho:
     m_Target: 0
     speed: 2
